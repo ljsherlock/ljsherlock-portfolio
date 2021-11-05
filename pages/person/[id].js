@@ -7,11 +7,11 @@ import imageUrlFor from "../../utils/imageUrlFor";
 
 const personsQuery = `*[_type == "author"] { _id }`;
 
-const singlePersonQuery = `*[_type == "person" && _id == $id] {
+const singlePersonQuery = `*[_type == "author" && _id == $id] {
   _id,
   name,
   image,
-  "actedIn": *[_type == "movie" && references(^._id)] {
+  "actedIn": *[references(^._id)] {
     _id,
     title,
     releaseDate,
@@ -21,6 +21,7 @@ const singlePersonQuery = `*[_type == "person" && _id == $id] {
 `;
 
 const Person = ({ person }) => {
+  console.log(person)
   return (
     <Layout>
       <div className="person">
