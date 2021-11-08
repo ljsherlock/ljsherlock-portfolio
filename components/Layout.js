@@ -8,36 +8,28 @@ export default function Layout(props) {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Sanity + Next.js = 💖</title>
+        <title>Lewis Sherlock</title>
       </Head>
-      <nav>
-        <Link href="/">
-          <a>Movies</a>
-        </Link>
-        <Link href="/people">
-          <a>People</a>
-        </Link>
-      </nav>
-      <GithubCorner />
+
       <div id="main">{props.children}</div>
       <footer>
-        <a href="http://sanity.io">
-          <img src="/sanity-logo.svg" alt="Sanity Logo" />
-        </a>
-        +
-        <a href="https://github.com/zeit/next.js" alt="NextJs Logo" >
-          <img
-            className="next"
-            src="/nextjs-logo.svg"
-          />
-        </a>
-        = 💖
+        <Link href="mailto:lewis@ljsherlock.com">
+          <a>Email me</a>
+        </Link>
+        <a href="https://twitter.com/LifeofSherlock" target="_blank">DM me</a>
+        <Link href="/projects">
+          <a>View more projects</a>
+        </Link>
       </footer>
       <style jsx>{`
         footer {
           padding: 5rem 1rem;
           text-align: center;
           font-size: 2rem;
+          display: flex;
+          flex-direction: row;
+          align-items: space-between;
+          justify-content: space-evenly;
         }
 
         footer img {
@@ -45,6 +37,10 @@ export default function Layout(props) {
           height: 1em;
           width: auto;
           padding: 0 0.4em;
+        }
+        
+        a {
+          color: grey
         }
 
         nav {
@@ -74,6 +70,10 @@ export default function Layout(props) {
           -moz-osx-font-smoothing: grayscale;
           color: #2c3e50;
           padding: 3.5rem 0 0;
+        }
+        p {
+          font-size: 1rem;
+          line-height: 1.7rem;
         }
       `}</style>
     </div>

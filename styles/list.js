@@ -15,14 +15,20 @@ export default css`
     margin: 0;
     padding: 0;
     display: flex;
-    align-items: stretch;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
   }
 
   .list a {
     text-decoration: none;
     display: block;
     flex-grow: 1;
-    color: #333;
+    color: blue;
+  }
+  
+  .list p { 
+    max-width: 600px;
   }
 
   .list h3 {
@@ -32,9 +38,12 @@ export default css`
   }
 
   .list img {
+    border-radius: 100%;
     display: block;
     height: auto;
-    width: 100%;
+    min-width: 200px;
+    width: 17.5%;
+    max-width: 300px;
     margin-right: 0.5rem;
   }
 
