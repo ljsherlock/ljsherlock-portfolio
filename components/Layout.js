@@ -1,8 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
-import GithubCorner from "./GithubCorner";
+import React from "react";
+import Avatar from "./avatar";
 
 export default function Layout(props) {
+  console.log(props.author)
   return (
     <div>
       <Head>
@@ -10,7 +12,13 @@ export default function Layout(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Lewis Sherlock</title>
       </Head>
-
+      <nav style={{zIndex: '999', color: 'white'}}>
+        <Link href="/">
+          <a style={{display: 'flex', alignItems: 'center'}}>
+            <Avatar image={props.author.image} /> Lewis Sherlock
+          </a>
+        </Link>
+      </nav>
       <div id="main">{props.children}</div>
       <footer>
         <Link href="mailto:lewis@ljsherlock.com">
