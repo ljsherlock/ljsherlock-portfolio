@@ -43,8 +43,9 @@ export default css`
     height: auto;
     min-width: 200px;
     width: 17.5%;
-    max-width: 300px;
+    max-width: 200px;
     margin-right: 0.5rem;
+    border: 2px solid;
   }
 
   .list .noImage {
