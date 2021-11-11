@@ -22,7 +22,7 @@ const TimelineList = ({ dates }) => {
         </TimelineSeparator>
         <TimelineContent>
           <Typography variant="h6" component="span">
-            Blockchain andWeb3 Developer:
+            Blockchain and Web3 Developer:
           </Typography>
           <Typography>1 year</Typography>
         </TimelineContent>
