@@ -22,7 +22,7 @@ const TimelineList = ({ dates }) => {
         </TimelineSeparator>
         <TimelineContent>
           <Typography variant="h6" component="span">
-            Blockchain/Web3 Developer:
+            Blockchain andWeb3 Developer:
           </Typography>
           <Typography>1 year</Typography>
         </TimelineContent>
@@ -58,7 +58,7 @@ const TimelineList = ({ dates }) => {
         </TimelineSeparator>
         <TimelineContent>
         <Typography variant="h6" component="span">
-            Full-Stack Web Design/Development : 
+            Full-Stack Web Design and Development : 
         </Typography>
         <Typography>10 years</Typography>
         </TimelineContent>
