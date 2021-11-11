@@ -21,7 +21,7 @@ const Projects = ({ projects, author }) => {
                   {
                     project && project.mainImage.map(image => (
                       <div className='slide-container'>
-                        <img src={imageUrlFor(image).width(1080)} />
+                        <img src={imageUrlFor(image).width(1920)} />
                       </div>
                     ))
                   }
@@ -29,7 +29,13 @@ const Projects = ({ projects, author }) => {
               </div>
               <div className="project-meta"> 
                 <h2>{project.title}</h2>
-                <h4>{`Client: ${project.clientName}`}</h4>
+                {project.link && 
+                  
+                  <h4>{`Client: `}<a href={project.link} target="_blank" rel="noopener">{`${project.clientName}`}</a></h4>
+                } 
+                {!project.link && 
+                  <h4>{`Client: ${project.clientName}`}</h4>
+                } 
                 {project.body && project.body.map(b => (
                   <p key={b._key}>
                     {b.children.map(span => (
@@ -73,6 +79,7 @@ const Projects = ({ projects, author }) => {
           max-height: 85vh;
           max-width: 100%;
           width: auto;
+          margin: 2rem 0;
         }
       `}</style>
     </React.Fragment>

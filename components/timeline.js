@@ -22,7 +22,7 @@ const TimelineList = ({ dates }) => {
         </TimelineSeparator>
         <TimelineContent>
           <Typography variant="h6" component="span">
-            Web3:
+            Blockchain/Web3 Developer:
           </Typography>
           <Typography>1 year</Typography>
         </TimelineContent>
@@ -34,7 +34,7 @@ const TimelineList = ({ dates }) => {
         </TimelineSeparator>
         <TimelineContent>
         <Typography variant="h6" component="span">
-            ReactJS: 
+            ReactJS Developer:  
         </Typography>
         <Typography>5 years</Typography>
         </TimelineContent>
@@ -46,21 +46,9 @@ const TimelineList = ({ dates }) => {
         </TimelineSeparator>
         <TimelineContent>
         <Typography variant="h6" component="span">
-            User Interface Design 
+            Designer
         </Typography>
         <Typography>6 years</Typography>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot color='secondary'/>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>
-        <Typography variant="h6" component="span">
-            User Interface Engineering 
-        </Typography>
-        <Typography>8 years</Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -70,7 +58,7 @@ const TimelineList = ({ dates }) => {
         </TimelineSeparator>
         <TimelineContent>
         <Typography variant="h6" component="span">
-            PHP, HTML, CSS & JavaScript : 
+            Full-Stack Web Design/Development : 
         </Typography>
         <Typography>10 years</Typography>
         </TimelineContent>

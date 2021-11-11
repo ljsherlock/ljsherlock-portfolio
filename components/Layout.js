@@ -42,7 +42,7 @@ export default function Layout(props) {
             </a>
           </Grid>
           <Grid display='flex' flexDirection="column" justifyContent='center' alignItems='center' xs={2}>
-            <a href="linkedin.com/in/lewis-sherlock" target="_blank" rel="noopener">
+            <a href="https://linkedin.com/in/lewis-sherlock" target="_blank" rel="noopener">
               <LinkedInIcon fontSize='small'/>
             </a>
           </Grid>
