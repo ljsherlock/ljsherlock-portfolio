@@ -37,7 +37,15 @@ const query2 = `*[_type == "project"] | order(publishedAt desc) {
 }[0...3]
 `;
 
-const Movies = ({ authors, projects }) => {
+const pagesQuery = `*[_type == "page"] {
+  _id,
+  title,
+  years,
+  bio,
+}[0...50]
+`;
+
+const Movies = ({ authors, projects, pages }) => {
   return (
     <Layout author={authors[0]}>
       <div className="movies">
@@ -88,7 +96,7 @@ const Movies = ({ authors, projects }) => {
         </ul>
       </div>
 
-      <TimelineList/>
+      <TimelineList pages={pages}/>
       <style jsx>{`
         .movies {
           padding: 1rem;
@@ -109,8 +117,9 @@ const Movies = ({ authors, projects }) => {
 export const getStaticProps = async () => {
   const authors = await sanity.fetch(query);
   const projects = await sanity.fetch(query2);
+  const pages =  await sanity.fetch(pagesQuery);
   return {
-    props: { authors, projects } // will be passed to the page component as props
+    props: { authors, projects, pages } // will be passed to the page component as props
   };
 };
 
