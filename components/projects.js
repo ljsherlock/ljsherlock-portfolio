@@ -3,15 +3,17 @@ import sanity from "../lib/sanity";
 import imageUrlFor from "../utils/imageUrlFor";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Grid from '@mui/material/Grid';
 
 const Projects = ({ projects, author }) => {
   return (
     <React.Fragment>
       <div className="projects">      
       <h1>Portfolio</h1>
+      <Grid container spacing={3}>
         {projects && projects.map(project =>  {
           return (
-            <div className="project">
+            <Grid item md={6} className="project">
               <div style={{background: `${project.color}`}}>
                 {project && project.mainImage && <Carousel 
                   key={project._id}
@@ -46,10 +48,10 @@ const Projects = ({ projects, author }) => {
                   </p>
                 ))}
               </div>
-            </div>
+            </Grid>
             )
         })}
-
+      </Grid>
       </div>
       <style jsx>{`
         .projects {

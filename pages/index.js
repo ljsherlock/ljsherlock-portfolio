@@ -34,7 +34,7 @@ const query2 = `*[_type == "project"] | order(publishedAt desc) {
   color,
   publishedAt,
   body
-}[0...3]
+}[0...4]
 `;
 
 const pagesQuery = `*[_type == "page"] {

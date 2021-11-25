@@ -9,7 +9,6 @@ import Typography from '@mui/material/Typography';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 
 export default function Layout(props) {
-  console.log(props.author)
   return (
     <div>
       <Head>
