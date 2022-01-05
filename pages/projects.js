@@ -17,7 +17,7 @@ const query = `*[_type == "project"] | order(publishedAt desc) {
   color,
   publishedAt,
   body
-}[4...50]
+}[0...50]
 `;
 
 const query2 = `*[_type == "author" && name == "Lewis Sherlock"] {
