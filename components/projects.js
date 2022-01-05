@@ -9,7 +9,7 @@ const Projects = ({ projects, author }) => {
   return (
     <React.Fragment>
       <div className="projects">      
-      <h1>Portfolio</h1>
+      <h1>Projects</h1>
       <Grid container spacing={3}>
         {projects && projects.map(project =>  {
           return (
